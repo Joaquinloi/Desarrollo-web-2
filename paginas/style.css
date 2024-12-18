@@ -1,0 +1,21 @@
+.fondo {
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:  url(../imagenes/background.jpg);
+    background-size: cover;
+    background-position: center;
+  
+  }
+  .texto{
+    color: whitesmoke;
+    text-align: center;
+    width: 50%;
+    font-size: 30px;
+  }
+
+  body{
+    background-color: rgb(167, 167, 167),
+  }
