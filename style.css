@@ -4,104 +4,116 @@
   box-sizing: border-box;
 }
 
-.parrafo-principal {
-  text-align: center;
-  font-family: "Work Sans", sans-serif;
-  font-style: normal;
-  font-size: 5px;
-}
-
-
-
-container-fluid {
-  background-color: rgb(192, 188, 188);
-}
-
-navbar-brand {
-  height: 100%;
-  width: 5px;
-}
-
 body {
-  background-image: linear-gradient(rgba(3,5,10,0.1), rgba(3,5,10,0.1)), url(imagenes/38679435-para-patrones-de-relleno-de-fondo-página-web-blog-textura-con-estilo.jpg);
-  height: 100;
+  --s: 100px; /* control the size*/
+  --c1: #cecfcf;
+  --c2: #ffffff;
+  --_g: #0000 90deg,var(--c1) 0;
+  background: conic-gradient(from 90deg at 2px 2px, var(--_g)), conic-gradient(from 90deg at 1px 1px, var(--_g)), var(--c2);
+  background-size: var(--s) var(--s), calc(var(--s) / 5) calc(var(--s) / 5);
+  font-family: "Delius", serif;
+  font-weight: 400;
+  font-style: normal;
   min-height: 100vh;
-  
-}
-
-header .logo {
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.logo :hover {
-  transform: scale(2.5);
-}
-
-.logo {
-  height: 70px;
-  width: auto;
+  padding: 20px;
   justify-content: center;
 }
 
-.collapse navbar-collapse .nav-link active :hover {
-  transform: scale(1.5);
+.header h1 {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 2.9em;
+  text-transform: uppercase;
 }
 
-.navbar-collapse .nav-link active :hover {
-  color: yellowgreen;
-}
-
-.grid__container {
+.grid_container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid black;
   width: 100%;
   max-width: 1000px;
-  margin: 50px auto;
-  padding: .5rem;
+  margin: 1.6em;
+  padding: 30px;
   display: grid;
-/* rows es para las filas. Auto rows le digo a grid que cree las filas */
-  grid-auto-rows: 300px;
-  /* colums template para indicar la cantidad de columnas.El parametro repeat en el primer campo es la cant de columnas que quiero y el segundo el tamaño */
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  /* 1fr es la unidad de medida una fraccion/ auto-fill es para que grid asigne el tamaño */
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1.6rem;
 }
 
-.grid__items {
-  color: rgb(226, 158, 68);
-  font-size: 1.5rem;
+.titulo {
+  grid-column: 1/7;
+  grid-row: 1/-1;
+  background-color: rgb(42, 42, 80);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 10px;
+}
+
+.content {
+  grid-column: 1/6;
+  gap: 10px;
+}
+
+.article {
+  background-color: rgb(155, 155, 155);
+  padding: 30px;
+  margin-top: 10px;
+}
+
+h2 {
+  text-align: left;
+  padding: 10px;
+}
+
+p {
+  text-align: justify;
+  padding-top: 5px;
+}
+
+.sidebar {
+  grid-column: 6/7;
+  background-color: #cecfcf;
+  color: #1b1b1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer {
+  grid-column: 1/7;
+  background-color: #525151;
+  padding: 1opx;
   text-align: center;
-  background-size: cover;
-  background-position: center;
+  grid-row: 7/10;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  padding: 10px;
+}
+
+.foto {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.related-post {
+  background-color: #1b1b1b;
+  color: #ffffff;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
- } 
-
-/* ahora modifico cada uno de los hijos, para poder agregar la imagen*/
-.grid__items:nth-child(1) {
-  background-image:url(imagenes/aperitivos.jpg);
-  /* si quiero que la imagen 1 ocupe dos cuadritos de la grilla hacia la derecha utilizo grid-column: span 2; */
-}
-.grid__items:nth-child(2) {
-  background-image: url(imagenes/carnes.jpg);
-}
-.grid__items:nth-child(3) {
-  background-image: url(imagenes/panaderia.jpg);
-  
-}
-.grid__items:nth-child(5) {
-  background-image: url(imagenes/postres.jpg);
-  
+  transition: all 0.5 ease;
 }
 
- @media screen and (min-width:850px) {
-/* a partir de los 850px aplico ciertos estilos */
-/* por ejemplo que ocupe dos a la derecha o dos hacia abajo */
-/*creo la clase para la imagen que quiero mover */
-.ancho {
-   grid-column: span 2;
-} 
-}
-
-
-/*# sourceMappingURL=style.css.map */
+.related-post :hover {
+  cursor: pointer;
+  color: #1b1b1b;
+  background-color: #ffffff;
+}/*# sourceMappingURL=style.css.map */

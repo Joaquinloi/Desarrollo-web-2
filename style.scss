@@ -5,60 +5,192 @@
     box-sizing: border-box;
 }
 
-container-fluid {
-    background-color: beige;
-}
-
-navbar-brand { 
-    height: 100%;
-    width: 5px;
-}
-
-
 body {
-    background-color: rgb(161, 160, 160);
-}
+        --s: 100px; /* control the size*/
+        --c1: #cecfcf;
+        --c2: #ffffff;
+        
+        --_g: #0000 90deg,var(--c1) 0;
+        background: 
+          conic-gradient(from 90deg at 2px 2px,var(--_g)),
+          conic-gradient(from 90deg at 1px 1px,var(--_g)),
+          var(--c2);
+        background-size: var(--s) var(--s), calc(var(--s)/5) calc(var(--s)/5);
 
-header .logo { 
-    cursor: pointer;
-    transition: all 0.3s;
-}
+  font-family: "Delius", serif;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100vh;
+  padding: 20px;
+  justify-content: center;
 
-.logo :hover { 
-    transform: scale(2.5);
-}
-
-
-.logo { 
-    height: 70px;
-    width:  auto;
- justify-content: center
-}
-
-.collapse navbar-collapse .nav-link active :hover {
-    transform: scale(1.5);
-}
-
-.navbar-collapse .nav-link active :hover {
-    color: yellowgreen;
-}
-
-.grid__container {
-    border: 1px solid white;
-    width: 100%;
-   max-width: 1000px;
-   margin: 50px auto;
-   padding: 1rem;
-
-    display: grid;
-    grid-auto-rows: 300px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
   }
 
-  .grid__items {
-    border: 2px solid black;
-    color: antiquewhite;
-    font-size: 1.5rem;
-    text-align: center;
+// header
+
+.header h1 {
+padding: 20px 0;
+text-align: center;
+font-size: 2.9em;
+text-transform: uppercase;}
+
+
+// estilo de las paginas
+
+.grid_container {
+background-color: #ffffff;
+border-radius: 10px;   
+border: 2px solid black;
+width: 100%;
+max-width: 1000px;
+margin: 1.6em;
+padding: 30px; 
+
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(4,1fr);
+gap: 1.6rem;
+
   }
+
+.titulo {
+  grid-column: 1/7;
+  grid-row: 1/-1;
+  background-color: rgb(42, 42, 80);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 10px;
+}
+
+.content{
+  grid-column: 1/6;
+  gap: 10px;
+}
+
+.article {
+  background-color: rgb(155, 155, 155);
+  padding: 30px;
+  margin-top: 10px;
+
+}
+
+h2 {
+  text-align: left;
+  padding: 10px;
+}
+
+p{
+  text-align: justify;
+  padding-top: 5px;
+}
+.sidebar {
+  grid-column: 6/7;
+  background-color: #cecfcf;
+  color: #1b1b1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer {
+ grid-column: 1/7;
+ background-color: #525151;
+ padding: 1opx;
+ text-align: center;
+ grid-row: 7/10;
+ justify-content: center;
+ align-items: center;
+}
+
+h3 {
+  padding: 10px;
+}
+
+.foto {
+  width: 100% ;
+  margin-top: 5px;
+}
+
+.related-post {
+background-color: #1b1b1b;
+color: #ffffff;
+height: 180px;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 0.5 ease;
+}
+
+.related-post :hover{
+  cursor: pointer;
+  color: #1b1b1b;
+  background-color: #ffffff;
+}
+
+// @media screen {
+// max-width : 768px ;
+//   .header {
+//     align-items: center;
+//        }
+//       .grid_container {
+//         grid-template-columns: 1/-1;
+//       }
+// } 
+
+
+// container-fluid {
+//     background-color: beige;
+// }
+
+// navbar-brand { 
+//     height: 100%;
+//     width: 5px;
+// }
+
+// header .logo { 
+//     cursor: pointer;
+//     transition: all 0.3s;
+// }
+
+// .logo :hover { 
+//     transform: scale(2.5);
+// }
+
+
+// .logo { 
+//     height: 70px;
+//     width:  auto;
+//  justify-content: center
+// }
+
+// .collapse navbar-collapse .nav-link active :hover {
+//     transform: scale(1.5);
+// }
+
+// .navbar-collapse .nav-link active :hover {
+//     color: yellowgreen;
+// }
+
+
+
+//   .grid__items {
+//     border: 2px solid black;
+//     color: antiquewhite;
+//     font-size: 1.5rem;
+//     text-align: center;
+//   }
+
+//   .titulo-principal { 
+//     text-align: center;
+//     font-size: 2rem;
+//     color: antiquewhite;
+//     justify-content: center;
+//     background-image: url(imagenes/background.jpg)  ;
+//     background-size: cover;
+//   }
+
+  
